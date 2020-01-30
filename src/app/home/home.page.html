@@ -11,16 +11,22 @@
 
 <ion-content>
   <ion-card class="welcome-card">
-    <img src="/assets/shapes.svg" alt=""/>
+    <img src="/assets/vikings.jpg" alt=""/>
     <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Ionic</ion-card-title>
+      <ion-card-subtitle>Séries, Nórdicos</ion-card-subtitle>
+      <ion-row>
+        <ion-column>
+          <ion-card-title>Vikings</ion-card-title>
+        </ion-column>
+        <ion-column>
+          <ion-icon size="large" name="thumbs-up"></ion-icon>
+          <ion-icon size="large" name="thumbs-down"></ion-icon>
+        </ion-column>
+      </ion-row>
     </ion-card-header>
     <ion-card-content>
-      <p>
-        Now that your app has been created, you'll want to start building out features
-        and components. Check out some of the resources below for next steps.
-      </p>
+      <p>Saiba Mais!</p>
+      <ion-button (click)="alerta()">Ver conteúdo</ion-button>
     </ion-card-content>
   </ion-card>
 
