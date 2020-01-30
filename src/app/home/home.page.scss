@@ -2,3 +2,10 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.columnTitle{
+  align-content: flex-start;
+}
+.columnLikes{
+  align-items: flex-end
+}

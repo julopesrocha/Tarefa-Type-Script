@@ -1,0 +1,28 @@
+
+<ion-card class="welcome-card">
+  <img src="" alt=""/>
+  <ion-card-header>
+    <ion-grid>
+      <ion-row><ion-card-subtitle></ion-card-subtitle></ion-row>
+      <ion-row>
+        <ion-col class= 'columnTitle' size="8">
+            <ion-card-title></ion-card-title>
+        </ion-col>
+        <ion-col class='columnLikes' >
+            <ion-icon size="large" name="thumbs-up" (click)="like(post)" color="{{post.state_like ? 'success' : 'medium'}}"></ion-icon>
+            <ion-icon size="large" name="thumbs-down" (click)="dislike(post)" color="{{post.state_dislike ? 'danger' : 'medium'}}"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-header>
+  <ion-card-content>
+
+  <div *ngIf="post.spoiler; else elseBlock">
+      <ion-icon size="large" name="alert"></ion-icon>
+      Alerta de Spoiler
+  </div>
+  <ng-template #elseBlock>{{post.show}}</ng-template>
+      <ion-button (click)="showSpoiler()">Mostrar</ion-button>
+
+  </ion-card-content>
+</ion-card>
